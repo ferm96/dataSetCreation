@@ -1,0 +1,39 @@
+Dataset creation tool:
+I made a widget to save images from video .mp4 files or from real time recording of video stream. The tool is very straight forward and simple to use and has functions such as choosing source URL from either a locally stored file, or a URL such as an IP address from a stream, the output data will be stored in a user selected folder on the computer with default saving name. The user can also choose what resolution the images will have and how many images to save per second of the video. 
+This tool is made to make it easier to create a dataset of images to be used for annotation and later training of an AI framework. Using this tool, you at HIAB can record videos of objects that you would like to be trained in a model, put the video into this tool and get out a dataset to immediately import to CVAT for annotation.
+With a good GPU you could save many images per second with high resolution, this if you would like to abuse the CVAT interpolation tool for being able to annotate a large dataset in a quick way. The normal annotation takes much longer time.
+
+CVAT:
+Problem with importing a large dataset:
+There is 2 solution to this:
+	Using the ‘share’ function
+•	https://github.com/opencv/cvat/blob/develop/cvat/apps/documentation/installation.md#share-path
+
+Or by increasing the maximum number of images and data size to upload using the function ‘local’. This is done by changing the parameter in the cvat: base.py file and after its done, reinstall cvat.
+•	https://github.com/opencv/cvat/issues/139
+Changing a parameter in the cvat source file can make us import large datasets using the ‘local’ function in cvat. Otherwise the ‘share’ function should be the goto solution. 
+Articles closely related to this project
+•	Dalal, Triggs. 2005. Histogram of oriented gradients for Human Detection (revolutionary thesis for object detection)
+•	SSD article, this method is one of the most popular for object detection together with YOLO
+•	Real time object detection on a raspberry pie (SSD vs YOLO), bachelor thesis
+•	Object detection with deep learning
+
+Usage of trained models:
+For best results, you would have the input size to
+be close the training size. This might have been why YOLO performed worse
+than SSD in accuracy in the test done by the bachelor students at Linneuniversitetet.
+
+QT version:
+What build kit am I using?
+OpenCv version:
+
+What version have I built?
+
+
+
+
+
+
+
+
+

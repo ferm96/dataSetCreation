@@ -1,0 +1,13 @@
+*.png
+*.jpg
+*.xml
+*.mp4
+*.o
+*.so
+
+[Bb]uild
+[Oo]pencv/*
+[Ss]tudentEx/*
+[Tt]hirdparty/*
+[An]notation/*
+Annotation/
