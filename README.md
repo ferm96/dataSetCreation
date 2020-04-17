@@ -18,3 +18,10 @@ git push
 git pull
 
 ```
+- Git clone
+
+```
+git clone <url>
+
+```
+
