@@ -19,8 +19,7 @@
 
 #define ARRAY_COUNT(arr) (sizeof(arr) / sizeof((arr)[0]))
 
-std::string Cleaning::SourceUrl = "http://192.168.1.111:8080/stream?topic=/HiVision_Box_1_camera/image_raw";
-        //"http://192.168.1.111:8080/stream?topic=/HiVision_Box_1_camera/image_raw";
+std::string Cleaning::SourceUrl = "";
 std::string Cleaning::DestUrl = "";
 std::string Cleaning::VideoName = "";
 int Cleaning::FrameCtrl = 1; //default
@@ -58,7 +57,9 @@ void Cleaning::GenerateData()
             Cleaning::VideoName.copy(VidName, (Cleaning::VideoName.size() + 1));
             VidName[Cleaning::VideoName.size()] = '\0';
         int count = 0;
-        while(count < 250 && cap.grab()) //remember to delete the count recording video
+        while(cap.grab())
+          //while(count < 250 && cap.grab())  
+          //use this for saving images from a stream, to limit the frames saved
         {
             cap >> frame;
             if (frame.empty())
