@@ -98,7 +98,7 @@ void Cleaning::NewFolder()
      QTime tid = DATE.time();
      QDate date = DATE.date();
 
-     std::string hour = std::to_string(tid.hour()+2), //Swedish timezone (+2h)
+     std::string hour = std::to_string(tid.hour()), //Swedish timezone (+2h)
                  min = std::to_string(tid.minute()),
                  day = std::to_string(date.day()),
                  month = std::to_string(date.month()),
